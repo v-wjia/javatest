@@ -36,7 +36,7 @@ public class JavaTest {
         
         //Quick Sort
         QuickSort QuickSort = new QuickSort();
-        QuickSort.run(SortList, 0, SortList.length-1);
+        QuickSort.run(SortList);
     }
     
 }

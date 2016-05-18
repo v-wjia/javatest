@@ -15,7 +15,12 @@ public class QuickSort {
         System.out.println("This is Quick Sort.");
     }
     
-    public static void run(int[] SortList, int left, int right) {
+    public void run(int[] SortList) {
+        int[] Sortedlist = quicksort(SortList, 0, SortList.length-1);
+        PrintList(Sortedlist);
+    }
+    
+    public int[] quicksort(int[] SortList, int left, int right) {
 //        int left = 0;
 //        int right = SortList.length;
         if (left < right) {
@@ -23,25 +28,25 @@ public class QuickSort {
             while(i < j) {
                 while(i<j && SortList[j] >= x) {
                     j--;
-                    if (i<j) {
-                        SortList[i++] = SortList[j];
-                    }
+                }
+                if (i < j) {
+                    SortList[i++] = SortList[j];
                 }
                 
                 while(i<j && SortList[i] < x) {
                     i++;
-                    if (i<j) {
-                        SortList[j--] = SortList[i];
-                    }
+                }
+                if (i < j) {
+                    SortList[j--] = SortList[i];
                 }
             }
             
             SortList[i] = x;
-            run(SortList, left, i-1);
-            run(SortList, i+1, right);
+            quicksort(SortList, left, i-1);
+            quicksort(SortList, i+1, right);
         }
         
-//        PrintList(SortList);
+        return SortList;
     }
     
     public static void PrintList(int[] SortList) {

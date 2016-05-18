@@ -46,6 +46,6 @@ public class SelectSort {
     }
     
     public static void PrintList(int[] SortList) {
-        System.out.println("Sort by Bubble:" + Arrays.toString(SortList));
+        System.out.println("Sort by Select:" + Arrays.toString(SortList));
     }    
 }
