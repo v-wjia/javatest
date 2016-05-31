@@ -33,7 +33,7 @@ class CalculateWeek {
         int j = year / 100;
         int k = year % 100;
 
-        int h = (day + (26 * (int)(month + 1) / 10) + k + (int)(k / 4) + (int)(j / 4) + 5 * j) % 7;
+        int h = (int)(day + (26.0 * (int)(month + 1) / 10) + k + (int)(k / 4.0) + (int)(j / 4.0) + 5 * j) % 7;
 
         switch (h) {
             case 0:
