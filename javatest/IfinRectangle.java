@@ -5,23 +5,22 @@
  */
 package javatest;
 import java.util.Scanner;
-import java.lang.Math;
 /**
  *
  * @author v-wjia
  */
-public class IfinCircle {
+public class IfinRectangle {
     public static void main(String [] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a point with two cordinates:");
+        System.out.println("Please enter 2 cordinates.");
         double x = input.nextDouble();
         double y = input.nextDouble();
-        double CircleRadius = 10.0;
-        double distance = Math.sqrt(Math.pow(x, 2)+ Math.pow(y, 2));
-        if (distance >= 10) {
-            System.out.println("Points are outside the circle." + distance);
+        double width = 10.0;
+        double height = 5.0;
+        if (x <= width/2 && y <= height/2) {
+            System.out.println("They are inside of the rectangle.");
         } else {
-            System.out.println("Points are inside the circle." + distance);
+            System.out.println("They are outside of the rectangle.");
         }
     }
 }
