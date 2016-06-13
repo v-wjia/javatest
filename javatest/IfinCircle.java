@@ -18,7 +18,7 @@ public class IfinCircle {
         double y = input.nextDouble();
         double CircleRadius = 10.0;
         double distance = Math.sqrt(Math.pow(x, 2)+ Math.pow(y, 2));
-        if (distance >= 10) {
+        if (distance >= CircleRadius) {
             System.out.println("Points are outside the circle." + distance);
         } else {
             System.out.println("Points are inside the circle." + distance);
